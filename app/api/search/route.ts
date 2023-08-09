@@ -5,7 +5,7 @@ export async function GET(req: NextRequest) {
   const encodedQ = encodeURI(q)
 
   const res = await fetch(
-    `https://www.googleapis.com/books/v1/volumes?q=${encodedQ}&langRestrict=en&key=AIzaSyCMzyELFAkiVnpZKBwKYZcKK1qi9ZUjd6M`
+    `https://www.googleapis.com/books/v1/volumes?q=${encodedQ}&langRestrict=en&key=${process.env.GOOGLE_BOOKS_API_KEY}`
   )
 
   const books = await res.json()

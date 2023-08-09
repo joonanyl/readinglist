@@ -32,17 +32,23 @@ export function BookCard({ authors, img, title }: Book) {
   return (
     <div className="bg-zinc-800 border border-yellow-50 rounded-lg shadow-md">
       <div className="flex justify-center items-center">
-        <div className="mt-8 border border-white-100">
-          <Image src={img} alt="Book cover" height={100} width={200} />
+        <div className="mt-8">
+          <Image
+            src={img}
+            alt="Book cover"
+            sizes="100vw"
+            height={100}
+            width={200}
+          />
         </div>
       </div>
       <div className="mt-4 px-4">
         <a href="#">
-          <h5 className="text-2xl font-bold ">{title}</h5>
+          <h5 className="text-2xl font-medium">{title}</h5>
         </a>
         <div className="flex flex-row justify-center space-x-1">
           {authors.map((author) => (
-            <p key={author} className="text-lg text-gray-400">
+            <p key={author} className="text-lg text-gray-400 font-light">
               {author}
             </p>
           ))}

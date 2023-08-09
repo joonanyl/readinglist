@@ -1,10 +1,11 @@
 import "./globals.css"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter, Quicksand } from "next/font/google"
 import { Abril_Fatface } from "next/font/google"
 
 const inter = Inter({ subsets: ["latin"] })
 const abrilFatface = Abril_Fatface({ weight: "400", subsets: ["latin"] })
+const quicksand = Quicksand({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Readlist",
@@ -18,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={abrilFatface.className}>{children}</body>
+      <body className={quicksand.className}>{children}</body>
     </html>
   )
 }
