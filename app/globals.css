@@ -17,6 +17,8 @@
 }
 
 body {
-  color: #fdfae2;
-  background: #756A5E;
+  /* background: #756A5E; */
+  background: white;
+  color: black;
+/* color: #fdfae2; */
 }
