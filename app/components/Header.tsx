@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 function PersonIcon() {
   return (
     <svg
@@ -19,12 +21,15 @@ export default function Header() {
   return (
     <div className="pb-4 mt-4 border-b-2">
       <div className="flex items-center justify-between px-6">
-        <h1 className="font-semibold text-lg lg:text-xl">📖 Readinglist</h1>
-        <p>📖</p>
+        <Link href={`/`}>
+          <h1 className="font-semibold text-lg lg:text-xl">📖 Readinglist</h1>
+        </Link>
         <div className="text-lg flex flex-row gap-4">
+          <Link href={`/search`}>
+            <p>Search</p>
+          </Link>
           <p>Docs</p>
           <p>List</p>
-          <p>Search</p>
         </div>
       </div>
     </div>
